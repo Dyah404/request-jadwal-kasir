@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Request Jadwal Karyawan</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+    <h1>Schedule Karyawan</h1>
+    <p>Portal Request Jadwal Kerja</p>
+</header>
+
+<main class="container">
+
+    <section class="card">
+        <h2>Form Request Jadwal</h2>
+
+        <p class="description">
+            Silakan isi formulir berikut untuk mengajukan
+            shift pagi, shift siang, libur, atau cuti.
+        </p>
+
+        <form id="requestForm">
+
+            <label for="nama">Nama Karyawan</label>
+            <input
+                type="text"
+                id="nama"
+                name="nama"
+                placeholder="Masukkan nama"
+                required
+            >
+
+            <label for="tanggal">Tanggal Jadwal</label>
+            <input
+                type="date"
+                id="tanggal"
+                name="tanggal"
+                required
+            >
+
+            <label for="jenis">Jenis Jadwal</label>
+            <select id="jenis" name="jenis" required>
+                <option value="">Pilih jadwal</option>
+                <option value="Shift Pagi">Shift Pagi</option>
+                <option value="Shift Siang">Shift Siang</option>
+                <option value="Libur">Libur</option>
+                <option value="Cuti">Cuti</option>
+            </select>
+
+            <label for="alasan">Alasan Request</label>
+            <textarea
+                id="alasan"
+                name="alasan"
+                placeholder="Tuliskan alasan pengajuan"
+                rows="4"
+                required
+            ></textarea>
+
+            <button type="submit" id="submitBtn">
+                Kirim Request
+            </button>
+
+            <p id="message" role="status"></p>
+
+        </form>
+    </section>
+
+    <section class="card">
+        <h2>Informasi</h2>
+
+        <p>
+            Pengajuan jadwal akan diperiksa oleh petugas
+            sebelum ditetapkan sebagai jadwal resmi.
+        </p>
+
+        <p>
+            Pengajuan yang dikirim belum tentu disetujui.
+        </p>
+    </section>
+
+</main>
+
+<footer>
+    <p>Portal Request Jadwal Karyawan</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
